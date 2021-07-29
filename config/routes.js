@@ -20,8 +20,15 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  /* user*/
+  'POST /api/user/signup': 'UserController.register',
 
-
+  /* prodi*/
+  'POST /api/prodi':'ProdiController.create',
+  'GET /api/prodi':'ProdiController.findAll',
+  'GET /api/prodi/:id':'ProdiController.findOne',
+  'PUT /api/prodi/:id':'ProdiController.update',
+  'DELETE /api/prodi/:id':'ProdiController.delete',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
